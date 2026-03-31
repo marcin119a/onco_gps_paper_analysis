@@ -121,11 +121,8 @@ In Terminal enter:
 
 ```sh
 # Install dependencies
-conda env create -f environment.yml
-conda activate onco-gps
-
-# Download large data files (if needed)
-python code/download_data.py
+mamba env create -f environment.yml
+mamba activate onco-gps
 
 # Open Jupyter Notebook
 jupyter notebook
