@@ -96,27 +96,23 @@ __Chapter 9: Display genomic features on global Onco-GPS map__
 
 # Reproduce the Onco-GPS paper analysis
 
-### 1. Set up Your Computer's Environment  
+### 1. Set up Your Computer's Environment
 Requirements:
 
 1. [conda](https://conda.io/docs/)
-2. [SPro](https://spro.io)
-3. [git](https://git-scm.com/)
+2. [git](https://git-scm.com/)
 
 Get the requirements:
 1. Install [Anaconda](https://youtu.be/xKGaGXmy8j4) or [Miniconda](https://conda.io/miniconda.html)
-2. Install SPro
-
-<a href="https://asciinema.org/a/160691?autoplay=1"><img src="https://asciinema.org/a/160691.png" width="550"/></a>
-
-3. [Install git](https://git-scm.com/downloads)
+2. [Install git](https://git-scm.com/downloads)
 
 
-### 2. Get the Onco-GPS Shareable Project
+### 2. Get the Repository
 
 In Terminal enter:
 ```
-spro create -g https://github.com/UCSD-CCAL/onco_gps_paper_analysis onco_gps_paper_analysis
+git clone https://github.com/UCSD-CCAL/onco_gps_paper_analysis
+cd onco_gps_paper_analysis
 ```
 
 ### 3. Run the Notebooks
@@ -124,15 +120,20 @@ spro create -g https://github.com/UCSD-CCAL/onco_gps_paper_analysis onco_gps_pap
 In Terminal enter:
 
 ```sh
-cd onco-gps-paper-analysis
-spro enter  # starts project environment
-spro install  # installs project dependencies
-spro download  # downloads project data too large to store on Github
-spro run notebook  # opens Jupyter Notebook
+# Install dependencies
+conda env create -f environment.yml
+conda activate onco-gps
+
+# Download large data files (if needed)
+python code/download_data.py
+
+# Open Jupyter Notebook
+jupyter notebook
 ```
+
 Open `code/` and start with notebook 1, `1 Set up data.ipynb`. Then run whatever notebooks interest you.
 
-_Note: every time you want to edit or run the notebooks, you'll need to run the commands shown above._
+_Note: every time you want to edit or run the notebooks, activate the environment with `conda activate onco-gps` first._
 
 # Feedback
 If something's not working or you have questions, comments, or concerns, please [create an issue](https://github.com/UCSD-CCAL/onco-gps-paper-analysis/issues/new).
