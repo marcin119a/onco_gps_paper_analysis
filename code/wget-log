@@ -1,0 +1,6 @@
+--2026-03-31 16:20:47--  https://portals.broadinstitute.org/ccle_legacy/downloadFile/DefaultSystemRoot/exp_10/ds_30/CCLE_MUT_EXPR_RPPA_OncoGPS.zip?downloadff=true
+Resolving portals.broadinstitute.org (portals.broadinstitute.org)... 69.173.68.142
+Connecting to portals.broadinstitute.org (portals.broadinstitute.org)|69.173.68.142|:443... connected.
+HTTP request sent, awaiting response... 404 Not Found
+2026-03-31 16:20:47 ERROR 404: Not Found.
+
